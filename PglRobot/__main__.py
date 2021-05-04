@@ -232,13 +232,13 @@ def start(update: Update, context: CallbackContext):
                             InlineKeyboardButton(
                                 text="𝗣𝗴𝗹𝗭𝗼𝗻𝗲⚡️",
                                 url="https://t.me/PglZone",
-                            ),    
+                            ),
                         ],
                         [
                             InlineKeyboardButton(
                                 text="𝗦𝘂𝗽𝗽𝗼𝗿𝘁⚡️",
                                 url=f"https://t.me/{SUPPORT_CHAT}",
-                             ),
+                            ),
                             InlineKeyboardButton(
                                 text="𝗖𝗥𝗘𝗔𝗧𝗘𝗥⚡️",
                                 url="https://t.me/AuraX_Owner",
@@ -634,7 +634,9 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "PglRobot now ready to work!")
+            dispatcher.bot.sendMessage(
+                f"@{SUPPORT_CHAT}", "PglRobot now ready to work!"
+            )
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
